@@ -1,0 +1,8 @@
+name: pytest-examples
+services:
+  app:
+    build:
+      context: .
+      dockerfile: ./app
+    volumes:
+      - .:/app
