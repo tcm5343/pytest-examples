@@ -2,9 +2,9 @@
 FROM python:3.13
 
 ENV PYTHONUNBUFFERED=1
-ENV PYTHONPATH=$PYTHONPATH:./test:./src
+ENV PYTHONPATH=$PYTHONPATH:./app/test:./app/src
 
-WORKDIR /app
+WORKDIR /work
 
 COPY ./app/requirements.txt ./requirements.txt
 COPY ./app/requirements-dev.txt ./requirements-dev.txt
