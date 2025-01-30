@@ -30,8 +30,7 @@ def test_get_all_objects_when_uses_token(mock_boto3_client):
 	assert actual == expected
 	assert isinstance(actual, list)
 	assert mock_boto3_client.return_value.list_buckets.call_count == 2
-	mock_boto3_client.return_value.list_buckets.assert_called_with(
-		ContinuationToken='some-token')
+	mock_boto3_client.return_value.list_buckets.assert_called_with(ContinuationToken='some-token')
 
 
 def test_get_all_objects_when_no_buckets(mock_boto3_client):
